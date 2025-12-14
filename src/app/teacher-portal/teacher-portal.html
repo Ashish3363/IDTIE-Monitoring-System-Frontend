@@ -1,0 +1,87 @@
+<div class="min-h-screen p-6 animate-fade-in bg-gradient-to-br from-indigo-50 via-indigo-200 to-purple-100">
+  <!-- Header -->
+  <div class="max-w-4xl mx-auto mb-10">
+    <div class="rounded-2xl shadow-xl bg-gradient-to-r from-indigo-500 via-purple-500 to-indigo-500 p-8">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center">
+          <button (click)="handleBack()"
+            class="mr-4 flex items-center gap-2 px-4 py-2 rounded-xl bg-white/20 hover:bg-white/30 transition">
+            <lucide-icon name="arrow-left" class="w-5 h-5 text-white"></lucide-icon>
+            <span class="font-semibold text-white">Back</span>
+          </button>
+          <div>
+            <h1 class="text-3xl font-bold text-white">Teacher Registration Portal</h1>
+            <p class="text-white/80 mt-1">
+              Register to monitor dress code compliance and student records
+            </p>
+          </div>
+        </div>
+        <div
+          class="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center shadow-lg backdrop-blur-md">
+          <lucide-icon name="users" class="w-6 h-6 text-white"></lucide-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Forms -->
+  <div class="max-w-4xl mx-auto grid md:grid-cols-2 gap-8">
+    <!-- Teacher Registration -->
+    <div class="rounded-2xl shadow-xl bg-gradient-to-br from-indigo-500 to-white p-8 border border-indigo-100">
+      <div class="text-center mb-6">
+        <div
+          class="mx-auto w-14 h-14 bg-gradient-to-r from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center mb-4 shadow-md">
+          <lucide-icon name="user-plus" class="w-7 h-7 text-white"></lucide-icon>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">Teacher Registration</h2>
+        <p class="text-gray-700">Create your teaching account</p>
+      </div>
+
+      <form [formGroup]="registerForm" (ngSubmit)="handleTeacherRegister()" class="space-y-6" autocomplete="off">
+        <input type="text" placeholder="Full Name" formControlName="name" autocomplete="off" 
+          class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-indigo-500 bg-white shadow-sm" />
+
+        <input type="email" placeholder="Username" formControlName="email" autocomplete="off" 
+          class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-indigo-500 bg-white shadow-sm" />
+
+        <input type="password" placeholder="Password" formControlName="password" autocomplete="new-password" 
+          class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-indigo-500 bg-white shadow-sm" />
+
+       <button type="submit"
+        class="w-full py-3 rounded-xl font-bold text-white bg-gradient-to-r from-indigo-400 via-purple-500 to-indigo-600 shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200">
+        Register Teacher
+      </button>
+
+      </form>
+    </div>
+
+    <!-- Password Reset -->
+    <div class="rounded-2xl shadow-xl bg-gradient-to-br from-indigo-200 to-white p-8 border border-orange-100">
+      <div class="text-center mb-6">
+        <div
+          class="mx-auto w-14 h-14 bg-gradient-to-r from-indigo-400 to-indigo-600 rounded-full flex items-center justify-center mb-4 shadow-md">
+          <lucide-icon name="key" class="w-7 h-7 text-white"></lucide-icon>
+        </div>
+        <h2 class="text-2xl font-bold text-gray-900 mb-2">Password Reset</h2>
+        <p class="text-gray-700">Reset your account password manually</p>
+      </div>
+
+      <form [formGroup]="resetForm" (ngSubmit)="handlePasswordReset()" class="space-y-6" autocomplete="off">
+        <input type="email" placeholder="Enter your username" formControlName="email" autocomplete="off" 
+          class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-orange-500 bg-white shadow-sm" />
+
+        <input type="password" placeholder="Enter new password" formControlName="password" autocomplete="off" 
+          class="w-full px-4 py-3 border rounded-xl focus:ring-2 focus:ring-orange-500 bg-white shadow-sm" />
+
+        <button type="submit"
+          class="w-full py-3 rounded-xl font-bold text-white bg-gradient-to-r from-indigo-400 via-purple-500 to-indigo-600 shadow-lg hover:scale-105 hover:shadow-2xl transition-all duration-200">
+          Reset Password
+        </button>
+
+
+
+        
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,44 @@
+# Angular build output
+/dist/
+/out-tsc/
+tmp/
+temp/
+
+# Dependencies
+/node_modules/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Logs
+npm-debug.log
+yarn-error.log
+pnpm-debug.log
+lerna-debug.log
+
+# Environment files
+/src/environments/*.local.ts
+*.env
+*.env.local
+*.env.development.local
+*.env.test.local
+*.env.production.local
+
+# Compiled output
+*.js
+*.js.map
+
+# Angular cache
+.angular/
+
+# Others
+.DS_Store
+Thumbs.db
+
+# Coverage reports
+/coverage/
