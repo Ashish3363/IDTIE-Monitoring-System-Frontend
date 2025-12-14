@@ -3,7 +3,7 @@
 
 Angular frontend for **IDTieMonitor** - a real-time monitoring dashboard for detecting and logging ID/tie violations. Provides live monitoring, student management, and violation history with a modern UI built with Tailwind CSS.
 
-🔗 **Backend Repository**: [IDTieMonitor Backend](https://github.com/09samuel/idtiemonitor)
+🔗 **Backend Repository**: [IDTieMonitor Backend](https://github.com/Ashish3363/IDTIE-Monitoring-System)
 
 ## Tech Stack
 
@@ -40,7 +40,7 @@ npm install -g @angular/cli@20
 
 ```bash
 # Clone the repository
-git clone https://github.com/09samuel/idtiemonitor-frontend.git
+git clone https://github.com/Ashish3363/IDTIE-Monitoring-System-Frontend.git
 cd idtiemonitor-frontend
 
 # Install dependencies
